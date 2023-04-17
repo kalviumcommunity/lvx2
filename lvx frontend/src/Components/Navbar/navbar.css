@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgba(0, 0, 0, 0.886); */
+    background-color: rgb(33, 32, 32);
+    box-shadow:  2px 3px 10px 1px rgba(0, 0, 0, 0.747);
+    /* width: 50rem; */
+    /* border: 2px 2px solid black; */
+    height: 12vh;
+    flex-direction: row;
+}
+
+.logo {
+    margin-left: 6rem;
+    cursor: pointer;
+    animation: rotates 2s linear infinite alternate;
+}
+
+@keyframes rotates {
+    from{
+        transform: translateX(-0.3rem);
+    }
+    to{
+        transform: translateX(0.3rem);
+    }
+}
+
+.searchbar {
+    margin-left: 25vh;
+    display: flex;
+    margin-bottom: 6vh;
+    background-color: aqua;
+}
+
+.input {
+    font-size: larger;
+    width: 70vh;
+    height: 5vh;
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 3vh 3vh;
+    padding-left: 15px;
+}
+
+.icon {
+    color: white;
+    height: 2.55rem;
+    width: 5.3vh;
+    margin-left: 67.3vh;
+    margin-top: 0.1vh;
+    background-color: #546371;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-right-radius: 3vh;
+    border-top-right-radius: 3vh;
+    cursor: pointer;
+}
+
+.about{
+    /* background-color: #c63809; */
+    text-decoration: underline white;
+    width: 14vh;
+    height: 6vh;
+    font-size: x-large;
+    margin-left: 40rem;
+    /* padding: 0 0.5rem; */
+    /* border-radius: 10%; */
+    
+}
+
+.abtus{
+    color: white;
+    width: 150px;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* background-color: #0e8e96; */
+    text-align: center;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    margin-left: 10vh;
+    width: 10.5vh;
+    height: 6vh;
+    /* background-color: #0e8e96; */
+    text-decoration: underline white;
+    cursor: pointer;
+}
+
+#log{
+    color: white;
+    width: 10.5vh;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    margin-left: 10vh;
+    width: 10.5vh;
+    height: 6vh;
+    background-color: #e50707;
+    cursor: pointer;
+}
+
+#sel{
+    color: white;
+    text-decoration: underline white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+    width: 10.5vh;
+    height: 6vh;
+    cursor: pointer;
+}
