@@ -1,0 +1,33 @@
+.lvximg{
+    width: 90vh;
+    height: 80vh;
+}
+
+.aboutpage{
+    /* background-color: rgb(206, 197, 64); */
+    background-color: black;
+    height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutbox{
+    background-color: black;
+    color: aliceblue;
+    margin-left: 2vh;
+    height: 80vh;
+    width: 90vh;
+    display: flex;
+    align-items: center;
+  }
+
+.abouttext{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.github{
+    color: aliceblue;
+    cursor: pointer;
+}

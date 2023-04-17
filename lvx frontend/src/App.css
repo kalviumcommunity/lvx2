@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+*{
+  font-family: 'Inter', sans-serif;
+}
+
+.content {
+  justify-content: center;
+  align-items: center;
+  /* background-color: #E8E8E8; */
+  min-height: 92vh;
+  max-height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem 5rem; 
+  padding: 3rem;
+}
