@@ -1,0 +1,57 @@
+[
+  {
+    "id": 0,
+    "image": "https://5.imimg.com/data5/SELLER/Default/2021/6/WD/BO/TC/24989634/air-jordan-travis-scott-1000x1000.jpg",
+    "seller": "Nihit Yadav",
+    "itemname": "Nike Air Jordan Shoes",
+    "price": 5000,
+    "whatsapp": 9878568748,
+    "lpuid": 12218957,
+    "description": "Nike Air Jordans Travis Scott Edition, original condition with no scratches."
+  },
+  {
+    "id": 1,
+    "image": "https://image.api.playstation.com/vulcan/img/rnd/202010/2217/ax0V5TYMax06mLzmkWeQMiwH.jpg",
+    "seller": "Arsalan Hassan",
+    "itemname": "GOW 4",
+    "price": 2000,
+    "whatsapp": 9415157878,
+    "lpuid": 12218957,
+    "description": "I am selling God of War PC for 2000, I was unable to play so it's unused"
+  },
+  {
+    "id": 2,
+    "image": "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_600x.png?v=1668756103",
+    "seller": "Nihit Yadav",
+    "itemname": "Boat Airdopes 131",
+    "price": 900,
+    "whatsapp": 9415157878,
+    "lpuid": 12218957,
+    "description": "I am selling my Boat Airdopes 131 for 900 they are 7 months old still in good condition."
+  },
+  {
+    "id": 3,
+    "image": "https://cdn.shopify.com/s/files/1/0389/7812/5956/products/Pillow-Limbo-02.jpg?v=1665729014&width=713",
+    "seller": "Divyanshu Kashyap",
+    "itemname": "Pillow",
+    "price": 250,
+    "whatsapp": 9415157878,
+    "lpuid": 12218957,
+    "description": "I am selling my pillow for 250 which I bought 3 weeks back. It is in newly bought condition and its value was 450."
+  },
+  {
+    "id": 4,
+    "image": "https://ainak.pk/wp-content/uploads/2022/03/Ray-Ban-Wayfarer-black-1-scaled.webp",
+    "seller": "Chandan",
+    "itemname": "Rayban Sunglasses",
+    "price": 2000,
+    "whatsapp": 9415157878,
+    "lpuid": 12218957,
+    "description": "I am selling my Rayban glasses for 2000 which are worth 5000 as new, they are a year old."
+  },
+  { "id": 5,
+    "seller": "Somendra",
+    "itemname": "Test Item",
+    "price": 200
+  }
+]
