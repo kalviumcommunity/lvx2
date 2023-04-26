@@ -8,6 +8,7 @@ const itemSchema = new mongoose.Schema({
   itemname: {
     type: String,
     required: [true, "Item must have a name"],
+    unique: true,
   },
   price: {
     type: Number,
