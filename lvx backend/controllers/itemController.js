@@ -1,13 +1,22 @@
 const Item = require("./../models/itemModel");
 
-exports.getAllItems = (req, res) => {
-  res.status(200).json({
-    status: "success",
-    // results: items.length,
-    // data: {
-    //   items,
-    // },
-  });
+exports.getAllItems = async (req, res) => {
+  try {
+    const items = await Item.find();
+
+    res.status(200).json({
+      status: "success",
+      results: items.length,
+      data: {
+        items,
+      },
+    });
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: err,
+    });
+  }
 };
 
 exports.getItem = (req, res) => {
