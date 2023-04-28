@@ -1,5 +1,4 @@
 .product-card {
-    /* background-color: #0e8e96; */
     background-color: #C0DEFF;
     border: black 4px solid;
     min-height: 60vh;
@@ -37,4 +36,19 @@
     margin-top: 0.8rem;
     line-height: 3vh;
     padding-left: 1.3rem;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+*{
+  font-family: 'Inter', sans-serif;
+}
+
+.content {
+  justify-content: center;
+  align-items: center;
+  min-height: 92vh;
+  max-height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem 5rem; 
+  padding: 3rem;
 }
