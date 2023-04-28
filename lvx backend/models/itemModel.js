@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const itemSchema = new mongoose.Schema({
+  image: String,
   seller: {
     type: String,
     required: [true, "Seller must have a name"],
