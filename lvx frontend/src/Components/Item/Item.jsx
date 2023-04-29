@@ -23,7 +23,6 @@ const Item = () => {
     fetchDB();
   }, []);
   if (data) {
-    console.log(data);
     return (
       <div className="content">
         {data.map((product, index) => (

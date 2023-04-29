@@ -1,15 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+*{
+  font-family: 'Inter', sans-serif;
+}
+
+.content {
+  justify-content: center;
+  align-items: center;
+  min-height: 92vh;
+  max-height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem 5rem; 
+  padding: 3rem;
+}
+
 .product-card {
     background-color: #C0DEFF;
     border: black 4px solid;
-    min-height: 60vh;
-    width: 28rem;
+    height: 50vh;
+    width: 20vw;
     display: flex;
     flex-direction: column;
     cursor: pointer;
     padding: 1.5rem;
     border-radius: 2rem;
     box-shadow: 0 0.8rem 3rem rgba(0, 0, 0, 0.5);
-    transition: 0.25s;
+    transition: 0.20s;
 }
 
 .product-card:hover {
@@ -17,10 +33,10 @@
 }
 
 .img {
-    max-height: 280px;
-    max-width: 85%;
-    width: 100%;
-    margin-top: 2rem;
+    height: 25vh;
+    width: fit-content;
+    min-width: 15vw;
+    max-width: 20vw;
     align-self: center;
 }
 
@@ -37,18 +53,11 @@
     line-height: 3vh;
     padding-left: 1.3rem;
 }
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-*{
-  font-family: 'Inter', sans-serif;
+
+.descriptionY {
+    margin-top: 0.8rem;
+    line-height: 3vh;
+    padding-left: 1.3rem;
+    overflow-y: scroll;
 }
 
-.content {
-  justify-content: center;
-  align-items: center;
-  min-height: 92vh;
-  max-height: fit-content;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem 5rem; 
-  padding: 3rem;
-}
