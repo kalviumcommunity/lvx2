@@ -1,9 +1,13 @@
 import React from 'react'
-function loggedin() {
+import { useNavigate } from 'react-router-dom'
+function Loggedin() {
 
-    const handleLogout=()=>{
-        sessionStorage.removeItem('user')
-    }
+  const navigate = useNavigate()
+
+  const handleLogout=()=>{
+    sessionStorage.removeItem('user')
+    navigate('/')
+  }
   return (
     <>
     <button onClick={handleLogout}>Logout</button>
@@ -12,4 +16,4 @@ function loggedin() {
   )
 }
 
-export default loggedin
+export default Loggedin

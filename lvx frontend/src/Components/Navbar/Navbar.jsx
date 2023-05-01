@@ -49,7 +49,7 @@ function Navbar() {
         </div>
         <div className="login">
           <div
-            id="log"
+            className="log"
             onClick={(e) => {
               if (userDetails) {
                 navigate("loggedin");
