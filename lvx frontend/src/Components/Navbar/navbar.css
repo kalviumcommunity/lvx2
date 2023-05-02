@@ -90,7 +90,7 @@
     cursor: pointer;
 }
 
-#log{
+.log{
     color: white;
     width: 10.5vh;
     height: 6vh;
@@ -98,6 +98,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .sell {
@@ -110,6 +111,10 @@
     height: 6vh;
     background-color: #e50707;
     cursor: pointer;
+}
+
+.sell:hover{
+    background-color: #850101;
 }
 
 #sel{

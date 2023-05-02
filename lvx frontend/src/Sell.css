@@ -9,7 +9,7 @@
 .sell-form {
     background-color: #C0DEFF;
     /* color: white; */
-    height: 70vh;
+    height: fit-content;
     width: 35rem;
     display: flex;
     flex-direction: column;
@@ -30,26 +30,33 @@
     margin-right: 4vh;
 }
 
+.imglink{
+    height: 1.5rem;
+    width: 20vw;
+}
+
 .name{
-    font-size: x-large;
-    margin-left: 2rem;
+    font-size: large;
+    margin-left: 4rem;
     margin-bottom: -1.8vh;
 }
 
 .enter{
-    padding: 0.5rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    padding: 0.2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: -1vh;
 }
 
 .descrip {
-    height: 4rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    height: 3rem;
+    padding: 0.5rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
     text-align: start;
 }
 
-.sell-icon {
+button {
     background-color: #E50707;
     height: 3.5rem;
     width: 6rem;
@@ -61,4 +68,9 @@
     border: solid black 3px;
     font-size: x-large;
     cursor: pointer;
+    color: white;
 }
+
+button[type=submit]:hover {
+    background-color: #850101;
+  }
