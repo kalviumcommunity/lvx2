@@ -5,9 +5,9 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import "./index.css";
 // import App from './App';
 import Product from "./pages/Product/product";
-import Sell from "./Sell";
+import Sell from "./pages/Sell/Sell";
 import Loggedin from "./pages/loggedin/loggedin";
-import About from "./About";
+import About from "./pages/about/About";
 import Home from "./pages/home/home";
 import Navbar from "./Components/Navbar/Navbar";
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -18,12 +18,12 @@ root.render(
     authorizationParams={{ redirect_uri: window.location.origin }}
   >
     <BrowserRouter>
-    <Navbar/>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<Product />} />
         <Route path="/sell" element={<Sell />} />
-        <Route path="/loggedin" element={<Loggedin/>} />
+        <Route path="/loggedin" element={<Loggedin />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
-import Logo from "./LVX.svg";
+import Logo from "../../Images/LVX.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import { useAuth0 } from "@auth0/auth0-react";

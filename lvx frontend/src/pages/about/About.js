@@ -1,5 +1,5 @@
 import React from "react";
-import lvx from "./Images/lvx.jpg";
+import lvx from "../../Images/lvx.jpg";
 import "./about.css";
 
 function About() {
