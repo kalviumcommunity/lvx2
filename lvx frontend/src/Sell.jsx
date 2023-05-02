@@ -1,43 +1,47 @@
 import React, { useState } from "react";
 import "./Sell.css";
 import { BiImageAdd } from "react-icons/bi";
+
 function Sell() {
   const [values, setValues] = useState({
-    seller: '',
-    itemname: '',
-    price: '',
-    whatsapp: '',
-    lpuid: '',
-    description: '',
+    seller: "",
+    itemname: "",
+    price: "",
+    whatsapp: "",
+    lpuid: "",
+    description: "",
     image: "",
     // unit: 'day',
     // type: 'accessories',
   });
+  
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    console.log(values)
+    e.preventDefault();
+    console.log(values);
     try {
-      const response = await fetch('http://127.0.0.1:3000/api/v1/items',{
-        method: 'POST',
-        body: JSON.stringify(values),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        },
-      })
-      console.log(response.status)
+      const response = await fetch(
+        process.env.REACT_APP_API_DOMAIN + "/api/v1/items",
+        {
+          method: "POST",
+          body: JSON.stringify(values),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        }
+      );
+      console.log(response.status);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   const handleChange = (e) => {
     setValues({
       ...values,
       [e.target.name]: e.target.value,
-      email: JSON.parse(sessionStorage.getItem('user')).email,
+      email: JSON.parse(sessionStorage.getItem("user")).email,
     });
   };
-
 
   return (
     <>
@@ -49,79 +53,35 @@ function Sell() {
             <div className="add-icon">
               <BiImageAdd size={60} />
             </div>
-            <input type="url" className="imglink" placeholder="Add image link" name="image" onChange={handleChange} required/>
+            <input className="imglink" required type="url" placeholder="Add image link" name="image" onChange={handleChange} />
           </div>
 
           {/* NAME */}
           <label className="name">Your Name</label>
-          <input 
-          type="text" 
-          className="enter" 
-          required
-          name='seller'
-          minLength={2}
-          maxLength={40}
-          onChange={handleChange}
-          title="Name should be greater than 1 character and less than 41 characters"/>
+          <input className="enter" required type="text" name="seller" minLength={2} maxLength={40} onChange={handleChange} title="Name should be greater than 1 character and less than 41 characters" />
 
           {/* PRODUCT NAME */}
           <label className="name">Name of the product</label>
-          <input 
-          className="enter" 
-          type="text" 
-          required
-          name='itemname'
-          minLength={3}
-          maxLength={50}
-          onChange={handleChange}
-          title="Product name should have more than 2 characters and less than 51"/>
+          <input className="enter" required type="text" name="itemname" minLength={3} maxLength={50} onChange={handleChange} title="Product name should have more than 2 characters and less than 51"/>
 
           {/* PRICE */}
           <label className="name">Price</label>
-          <input 
-          className="enter" 
-          required
-          name='price'
-          pattern='[0-9]{2,8}'
-          onChange={handleChange}
-          title="price should be less than 1cr and more than 10"
-          />
+          <input className="enter" required name="price" pattern="[0-9]{2,8}" onChange={handleChange} title="price should be less than 1cr and more than 10" />
 
           {/* WHATSAPP */}
           <label className="name">Whatsapp Number </label>
-          <input 
-          className="enter" 
-          name='whatsapp'
-          title='whatsapp number must be of 10 numbers'
-          pattern='[0-9]{10}'
-          onChange={handleChange}
-          required
-          />
+          <input className="enter" required name="whatsapp" pattern="[0-9]{10}" onChange={handleChange} title="whatsapp number must be of 10 numbers"/>
 
           {/* LPUID */}
           <label className="name">Lpu Id</label>
-          <input 
-          className="enter" 
-          required
-          name='lpuid'
-          title='lpuid must be of 8 numbers'
-          pattern='[0-9]{8}'
-          onChange={handleChange}
-          />
+          <input className="enter" required name="lpuid" title="lpuid must be of 8 numbers" pattern="[0-9]{8}" onChange={handleChange} />
 
           {/* DESCRIPTION */}
           <label className="name">Description</label>
-          <textarea 
-          className="descrip" 
-          required
-          name='description'
-          minLength={10}
-          maxLength={250}
-          onChange={handleChange}
-          title='Characters must be between 10 and 250' />
-          
+          <textarea className="descrip" required name="description" minLength={10} maxLength={250} onChange={handleChange} title="Characters must be between 10 and 250" />
+
           {/* SELL BUTTON */}
-          <button type="submit" className="sell-button" >
+          <button type="submit" className="sell-button">
             SELL
           </button>
         </form>
