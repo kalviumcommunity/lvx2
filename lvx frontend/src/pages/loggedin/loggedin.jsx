@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import "./loggedin.css"
 function Loggedin() {
 
   const navigate = useNavigate()
@@ -11,7 +12,7 @@ function Loggedin() {
   }
   return (
     <>
-    <button onClick={handleLogout}>Logout</button>
+    <button className='logout' onClick={handleLogout}>Logout</button>
     <div>Hello</div>
     </>
   )
