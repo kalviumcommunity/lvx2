@@ -7,6 +7,7 @@ function Loggedin() {
   const handleLogout=()=>{
     sessionStorage.removeItem('user')
     navigate('/')
+    window.location.reload()
   }
   return (
     <>

@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import { Auth0Provider } from "@auth0/auth0-react";
 import "./index.css";
-// import App from './App';
 import Product from "./pages/Product/product";
 import Sell from "./pages/Sell/Sell";
 import Loggedin from "./pages/loggedin/loggedin";

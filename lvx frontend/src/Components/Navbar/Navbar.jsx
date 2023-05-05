@@ -7,17 +7,16 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 function Navbar() {
   // const { loginWithRedirect, user, logout, loginWithPopup } = useAuth0();
-  const {  user, loginWithPopup } = useAuth0();
+  const { user, loginWithPopup } = useAuth0();
 
   const [userDetails, setUserDetails] = useState(null);
   const navigate = useNavigate();
 
-  useEffect(()=>{
+  useEffect(() => {
     if (JSON.parse(sessionStorage.getItem("user"))) {
-      console.log(JSON.parse(sessionStorage.getItem('user')))
       setUserDetails(JSON.parse(sessionStorage.getItem("user")));
     }
-  },[])
+  }, []);
   useEffect(() => {
     if (user) {
       setUserDetails(user);
