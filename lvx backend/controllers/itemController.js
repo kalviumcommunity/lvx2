@@ -2,7 +2,15 @@ const Item = require("./../models/itemModel");
 
 exports.getAllItems = async (req, res) => {
   try {
-    const items = await Item.find();
+    // const search = req.query.search || "";
+    // const regex = new RegExp(search, "i");
+    // const items = await Item.find({ itemname: regex });
+
+    let query = Item.find().sort('-createdAt'); // sort by createdAt in descending order (latest first)
+    if (req.query.search) {
+      query = query.where('itemname').regex(new RegExp(req.query.search, 'i')); // search by itemname if search query parameter exists
+    }
+    const items = await query;
 
     res.status(200).json({
       status: "success",

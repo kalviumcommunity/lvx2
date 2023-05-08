@@ -15,7 +15,6 @@ const Product = ({image,price,description,_id,seller,itemname,whatsapp,lpuid}) =
   }, [description]);
 
   function handleClick() {
-    // navigate(`/product/${_id}`);
     navigate(`/product/${_id}`, { state: {image,price,description,_id,seller,itemname,whatsapp,lpuid} })
   }
 

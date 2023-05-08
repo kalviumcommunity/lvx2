@@ -59,7 +59,7 @@
     width: 9vw;
     height: 6vh;
     font-size: x-large;
-    background-color: rgb(4, 163, 83);
+    /* background-color: rgb(4, 163, 83); */
 }
 
 .about:hover{
@@ -82,7 +82,7 @@
     align-items: center;
     justify-content: center;
     font-size: x-large;
-    background-color: #2c81d1;
+    /* background-color: #2c81d1; */
     width: 10.5vh;
     height: 6vh;
     text-decoration: underline white;

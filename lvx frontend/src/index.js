@@ -9,8 +9,10 @@ import Loggedin from "./pages/loggedin/loggedin";
 import About from "./pages/about/About";
 import Home from "./pages/home/home";
 import Navbar from "./Components/Navbar/Navbar";
+import { AppProvider } from "./context";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  <AppProvider>
   <Auth0Provider
     domain={process.env.REACT_APP_AUTH0_DOMAIN}
     clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
@@ -27,4 +29,5 @@ root.render(
       </Routes>
     </BrowserRouter>
   </Auth0Provider>
+  </AppProvider>
 );
