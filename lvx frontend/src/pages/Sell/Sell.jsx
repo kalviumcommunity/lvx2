@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "./Sell.css";
 import { BiImageAdd } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 function Sell() {
+  const navigate = useNavigate()
+  console.log(`${process.env.REACT_APP_API}/api/v1/items`)
   const [values, setValues] = useState({
     seller: "",
     itemname: "",
@@ -20,7 +23,7 @@ function Sell() {
     console.log(values);
     try {
       const response = await fetch(
-        process.env.REACT_APP_API_DOMAIN + "/api/v1/items",
+        `${process.env.REACT_APP_API}/api/v1/items`,
         {
           method: "POST",
           body: JSON.stringify(values),
@@ -29,6 +32,12 @@ function Sell() {
           },
         }
       );
+      if(response.status===201){
+        alert("Post successful")
+        navigate("/")
+      }else{
+        alert("Unable to post")
+      }
       console.log(response.status);
     } catch (error) {
       console.log(error);

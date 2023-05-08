@@ -1,12 +1,12 @@
 import React from "react";
-import lvx from "./Images/lvx.jpg";
+import lvx from "../../Images/lvx.jpg";
 import "./about.css";
 
 function About() {
   return (
     <>
       <div className="aboutpage">
-        <img src={lvx} alt="lvx" />
+        <img src={lvx} alt="lvx" className="lvximg"/>
         <div className="aboutbox">
           <div className="abouttext">
             Lvx is a classified website for LPU students, our motive is to make

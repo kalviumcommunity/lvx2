@@ -1,23 +1,45 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useRef } from "react";
 import "./navbar.css";
-import Logo from "./LVX.svg";
+import Logo from "../../Images/LVX.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useGlobalContext } from "../../context";
 
 function Navbar() {
   // const { loginWithRedirect, user, logout, loginWithPopup } = useAuth0();
-  const {  user, loginWithPopup } = useAuth0();
-
+  const { user, loginWithPopup } = useAuth0();
   const [userDetails, setUserDetails] = useState(null);
+  const {setSearchTerm, setSearchData} = useGlobalContext();
   const navigate = useNavigate();
+  const searchQuery = useRef('');
 
-  useEffect(()=>{
+  document.addEventListener('keyup', (event)=>{
+    if(event.key==='Enter' && searchQuery.current.value.trim()){
+      handleSearch()
+    }
+  })
+
+  const handleSearch = (e) => {
+    if(e){
+      e.preventDefault()
+    }
+    navigate('/');
+    setSearchTerm(searchQuery.current.value.trim())
+  }
+
+  const handleGoHome =() =>{
+    navigate('/')
+    setSearchData(null)
+    setSearchTerm('')
+    searchQuery.current.value = ''
+  }
+
+  useEffect(() => {
     if (JSON.parse(sessionStorage.getItem("user"))) {
-      console.log(JSON.parse(sessionStorage.getItem('user')))
       setUserDetails(JSON.parse(sessionStorage.getItem("user")));
     }
-  },[])
+  }, []);
   useEffect(() => {
     if (user) {
       setUserDetails(user);
@@ -29,16 +51,15 @@ function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <Link to="/">
-          <img src={Logo} alt="logo" className="logo" />
-        </Link>
+          <img onClick={handleGoHome} src={Logo} alt="logo" className="logo" />
         <div className="searchbar">
           <input
             type="text"
             className="input"
             placeholder="search for any product"
+            ref={searchQuery}
           />
-          <div className="icon">
+          <div className="icon" onClick={handleSearch}>
             <FiSearch size={30} />
           </div>
         </div>

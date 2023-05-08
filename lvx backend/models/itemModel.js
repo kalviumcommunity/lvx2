@@ -33,6 +33,10 @@ const itemSchema = new mongoose.Schema({
     required: [true, "Please provide description"],
     trim: true,
   },
+  createdAt: {
+    type: Date,
+    default: Date.now(),
+  },
 });
 
 const Item = mongoose.model("Item", itemSchema);

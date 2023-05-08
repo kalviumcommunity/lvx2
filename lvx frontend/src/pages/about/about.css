@@ -1,5 +1,5 @@
 .lvximg{
-    width: 90vh;
+    width: 44vw;
     height: 80vh;
 }
 
@@ -20,6 +20,7 @@
     width: 90vh;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
 .abouttext{
