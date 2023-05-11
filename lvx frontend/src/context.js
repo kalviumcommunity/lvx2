@@ -1,11 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useContext, useEffect } from "react";
-
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   //   const [loginObj, setLoginObj] = useState(null);
-  const [searchTerm, setSearchTerm] = useState(""); //Store the searched term
+  const [searchTerm, setSearchTerm] = useState(""); //Store search term
   const [searchData, setSearchData] = useState(null); //Store search results
   const [searching, setSearching] = useState(false); //To handle loader while search
   const url = `${process.env.REACT_APP_API}/api/v1/items`;

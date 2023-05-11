@@ -21,7 +21,7 @@ const Product = ({image,price,description,_id,seller,itemname,whatsapp,lpuid}) =
   return (
     <>
       <div className="product-card" onClick={handleClick}>
-        <img src={image} className="img" alt={itemname}/>
+        <div className="imagediv"><img src={image} className="img" alt={itemname}/></div>
         <div className="price">₹{price}</div>
         <div className={first}>{description}</div>
       </div>

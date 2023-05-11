@@ -18,24 +18,15 @@
 }
 
 .details{
-    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
     height: 29rem;
     justify-content: space-evenly;
 }
 
-/* .productdetails {
-  padding: 1rem;
-  width: 24rem;
-  min-height: 12rem;
-  background-color: #10a1ab;
-  color: white;
-} */
-
 .productdetails {
-    padding: 1rem;
-    width: 24rem;
+    padding: 2.1vh;
+    width: 25vw;
     min-height: 10rem;
     height: fit-content;
     background-color: white;
@@ -56,19 +47,10 @@
     font-size: 95%;
 }
 
-/* .sellerdetails{
-    padding: 1rem;
-    width: 24rem;
-    min-height: 10rem;
-    background-color: #10a1ab;
-    color: white;
-    font-size: larger;
-} */
-
 .sellerdetails{
-    padding: 1rem;
-    width: 24rem;
-    /* min-height: 8rem; */
+    /* padding: 1rem; */
+    padding: 2.1vh;
+    width: 25vw;
     background-color: white;
     border: 3px black solid;
     font-size: larger;
@@ -84,4 +66,61 @@
 
 .wpnum {
     margin-bottom: 0.5rem;
+}
+
+@media(max-width: 906px){
+  .content2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    min-height: 0vh;
+    max-height: fit-content;
+  }
+  .image {
+    margin-top: 2rem;
+    padding: 0.5rem;
+    width: 50vw;
+    height: 60vh;
+    border: 4px solid black;
+  }
+  .productdetails{
+    width: 50vw;
+  }
+  .sellerdetails{
+    width: 50vw;
+  }
+}
+
+@media(max-width: 750px){
+  .image {
+    width: 40vw;
+    height: 40vh;
+  }
+}
+
+@media(max-width: 600px){
+  .image {
+    width: 40vw;
+    height: 30vh;
+  }
+}
+
+@media(max-width: 450px){
+  .image {
+    width: 60vw;
+    height: 30vh;
+  }
+  .productdetails{
+    width: 60vw;
+  }
+  .sellerdetails{
+    width: 60vw;
+  }
+}
+
+@media(max-width: 350px){
+  .image {
+    height: 25vh;
+  }
 }
