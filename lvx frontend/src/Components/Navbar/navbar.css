@@ -196,6 +196,9 @@
         flex-direction: column;
         height: 30vh;
     } */
+    .about:hover{
+        background-color: unset;
+    }
     .logo{
         width: 9%;
     }

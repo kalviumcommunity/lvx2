@@ -26,6 +26,15 @@
     height: 50vh;
 }
 
+.loading {
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 .product-card {
     /* background-color: #38e1ff8d; */
     background-color: #C0DEFF;
