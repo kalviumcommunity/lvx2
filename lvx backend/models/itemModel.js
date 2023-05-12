@@ -37,8 +37,8 @@ const itemSchema = new mongoose.Schema({
     type: Date,
     default: Date.now(),
   },
+  email: "string"
 });
 
 const Item = mongoose.model("Item", itemSchema);
-
 module.exports = Item;

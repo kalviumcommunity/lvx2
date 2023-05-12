@@ -64,27 +64,27 @@ exports.createItem = async (req, res) => {
   }
 };
 
-exports.updateItem = async (req, res) => {
-  try {
-    const updatedItems = await Item.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-      runValidators: true,
-    });
+// exports.updateItem = async (req, res) => {
+//   try {
+//     const updatedItems = await Item.findByIdAndUpdate(req.params.id, req.body, {
+//       new: true,
+//       runValidators: true,
+//     });
 
-    res.status(200).json({
-      status: "success",
-      data: {
-        updatedItems,
-      },
-    });
-  } catch (err) {
-    console.error(err);
-    res.status(404).json({
-      status: "fail",
-      message: err,
-    });
-  }
-};
+//     res.status(200).json({
+//       status: "success",
+//       data: {
+//         updatedItems,
+//       },
+//     });
+//   } catch (err) {
+//     console.error(err);
+//     res.status(404).json({
+//       status: "fail",
+//       message: err,
+//     });
+//   }
+// };
 
 exports.deleteItem = async (req, res) => {
   try {

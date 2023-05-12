@@ -1,16 +1,20 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
-// import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./items.css";
 import ProductCard from "./ProductCard";
 import { useGlobalContext } from "../../context";
+import notFound from "../../Images/notfound.webp"
+import { useNavigate } from "react-router-dom";
 
 const Item = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [data, setData] = useState(null);
   const url = `${process.env.REACT_APP_API}/api/v1/items`
   const {searchData} = useGlobalContext()
+  const returnHome = () => {
+    navigate('/')
+  }
 
   useEffect(() => {
     const fetchDB = async () => {
@@ -26,7 +30,7 @@ const Item = () => {
   }, []);
   if(searchData===''){
     console.log(searchData)
-    return <>not found</>
+    return <div className="noresults"> <img src={notFound} onClick={returnHome} alt="notfound" className="notfound" /></div>
   }
   else if (searchData) {
     return (

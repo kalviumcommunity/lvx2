@@ -56,7 +56,7 @@ function Navbar() {
           <input
             type="text"
             className="input"
-            placeholder="search for any product"
+            placeholder="search for a product"
             ref={searchQuery}
           />
           <div className="icon" onClick={handleSearch}>

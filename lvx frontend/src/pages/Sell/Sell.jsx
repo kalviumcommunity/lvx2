@@ -22,6 +22,7 @@ function Sell() {
     e.preventDefault();
     console.log(values);
     try {
+      
       const response = await fetch(
         `${process.env.REACT_APP_API}/api/v1/items`,
         {

@@ -10,7 +10,6 @@
 }
 
 .logo {
-    /* margin-left: 6rem; */
     cursor: pointer;
     animation: rotates 2s linear infinite alternate;
 }
@@ -33,17 +32,18 @@
 
 .input {
     font-size: larger;
-    width: 34vw;
+    width: 30vw;
     height: 5vh;
     border: 2px solid black;
     border-top-left-radius: 3vh;
     border-bottom-left-radius: 3vh;
     padding-left: 15px;
+    font-style: italic;
 }
 
 .icon {
     color: white;
-    height: 5.2vh;
+    height: 5.4vh;
     width: 5.3vh;
     background-color: #546371;
     display: flex;
@@ -52,6 +52,7 @@
     border-bottom-right-radius: 3vh;
     border-top-right-radius: 3vh;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .about{
@@ -128,4 +129,91 @@
     width: 10.5vh;
     height: 6vh;
     cursor: pointer;
+}
+
+@media (max-width:750px){
+    .logo{
+        width: 10%;
+    }
+    .abtus{
+        font-size: large;
+        display: flex;
+    }
+    .login{
+        font-size: large;
+    }
+    .sell{
+        font-size: large;
+        height: fit-content;
+        width: fit-content;
+        padding: 1%;
+    }
+    #sel{
+        height: fit-content;
+        width: fit-content;
+    }
+    .input{
+        font-size: medium;
+    }
+}
+
+@media (max-width:550px){
+    .input{
+        font-size: x-small;
+        font-weight: 500;
+        width: 20vw;
+        height: 5vh;
+        padding-left: 15px;
+    }
+    .icon{
+        height: 5.4vh;
+        width: 5vh;
+    }
+    .logo{
+        width: 9%;
+    }
+    .abtus{
+        font-size: medium;
+        display: flex;
+    }
+    .login{
+        font-size: medium;
+    }
+    .sell{
+        font-size: medium;
+        height: fit-content;
+        width: fit-content;
+        padding: 0.6%;
+    }
+    #sel{
+        height: fit-content;
+        width: fit-content;
+    }
+}
+
+@media (max-width:420px){
+    .logo{
+        width: 9%;
+    }
+    .abtus{
+        font-size: small;
+        display: flex;
+    }
+    .login{
+        font-size: small;
+        height: fit-content;
+        width: fit-content;
+        padding: 1%;
+    }
+    .log{
+        height: fit-content;
+        width: fit-content;
+    }
+    .sell{
+        font-size: small;
+    }
+    #sel{
+        height: fit-content;
+        width: fit-content;
+    }
 }
