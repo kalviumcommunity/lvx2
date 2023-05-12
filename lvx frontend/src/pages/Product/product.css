@@ -12,8 +12,9 @@
 
 .image {
   padding: 0.5rem;
-  max-width: 50vw;
-  height: 60vh;
+  max-width: 35vw;
+  height: fit-content;
+  max-height: 60vh;
   border: 4px solid black;
 }
 

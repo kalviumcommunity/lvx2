@@ -7,7 +7,6 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { useGlobalContext } from "../../context";
 
 function Navbar() {
-  // const { loginWithRedirect, user, logout, loginWithPopup } = useAuth0();
   const { user, loginWithPopup } = useAuth0();
   const [userDetails, setUserDetails] = useState(null);
   const {setSearchTerm, setSearchData} = useGlobalContext();

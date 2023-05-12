@@ -8,7 +8,8 @@
 }
 
 .sell-form {
-    background-color: #c0deff;
+    /* background-color: #38e1ff8d; */
+    background-color:  skyblue;
     height: 80vh;
     width: 36vw;
     display: flex;

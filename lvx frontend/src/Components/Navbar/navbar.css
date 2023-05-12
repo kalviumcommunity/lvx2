@@ -27,7 +27,7 @@
     /* background-color: aqua; */
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .input {
@@ -192,6 +192,10 @@
 }
 
 @media (max-width:420px){
+    /* .navbar{
+        flex-direction: column;
+        height: 30vh;
+    } */
     .logo{
         width: 9%;
     }
