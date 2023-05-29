@@ -1,31 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-*{
-  font-family: 'Inter', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+    font-family: "Inter", sans-serif;
 }
 
 .content {
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 92vh;
-  max-height: fit-content;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem 5rem; 
-  padding: 3rem;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 92vh;
+    max-height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem 5rem;
+    padding: 3rem;
 }
 
-.noresults{
+.noresults {
     height: 88vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.notfound{
+.notfound {
     height: 50vh;
 }
 
+.loading {
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .product-card {
+    /* background-color: #38e1ff8d; */
     background-color: #C0DEFF;
     border: black 4px solid;
     height: 50vh;
@@ -35,16 +44,16 @@
     cursor: pointer;
     padding: 1.5rem;
     border-radius: 2rem;
-    box-shadow: 0 0.8rem 3rem rgba(0, 0, 0, 0.1);
-    transition: 0.20s;
+    box-shadow: 0 0.8rem 3rem rgba(0, 0, 0, 0.3);
+    transition: 0.2s;
     overflow: hidden;
 }
 
 .product-card:hover {
-    transform: scale(1.1)
+    transform: scale(1.1);
 }
 
-.imagediv{
+.imagediv {
     align-self: center;
     display: flex;
     justify-content: center;
@@ -81,39 +90,44 @@
     overflow-y: scroll;
 }
 
-@media(max-width:1060px){
-    .product-card{
+@media (max-width: 1060px) {
+    .product-card {
         height: 50vh;
         width: 30vw;
     }
-    .img{
+
+    .img {
         padding-bottom: 0%;
         max-width: 25vw;
         max-height: 25vh;
     }
 }
 
-@media(max-width:850px){
+@media (max-width: 850px) {
     .content {
         justify-content: space-around;
         align-items: center;
         display: flex;
         gap: 7vw 0rem;
-      }
-    .product-card{
+    }
+
+    .product-card {
         height: 45vh;
         width: 30vw;
         align-items: center;
     }
-    .description{
+
+    .description {
         font-size: small;
         margin-top: 0rem;
         padding-left: 0rem;
     }
+
     .descriptionY {
         font-size: small;
         padding: 0;
     }
+
     .price {
         font-size: large;
         margin-top: 0rem;
@@ -122,72 +136,81 @@
         font-weight: 600;
         align-self: center;
     }
-    .img{
+
+    .img {
         padding-bottom: 7%;
         max-width: 25vw;
         max-height: 25vh;
     }
 }
-@media(max-width:750px){
-    .content{
-        gap : 5.5vw 0rem;
+
+@media (max-width: 750px) {
+    .content {
+        gap: 5.5vw 0rem;
     }
-    .product-card{
-        height:40vh
+
+    .product-card {
+        height: 40vh;
     }
-    .img{
+
+    .img {
         max-width: 30vw;
         max-height: 20vh;
     }
 }
 
-@media(max-width:670px){
-    .content{
-        gap : 4vw 0rem;
+@media (max-width: 670px) {
+    .content {
+        gap: 4vw 0rem;
     }
 }
 
-@media(max-width:600px){
+@media (max-width: 600px) {
     .content {
         justify-content: center;
         align-items: center;
         display: flex;
-        gap: 2rem 4rem; 
+        gap: 2rem 4rem;
         padding: 2rem;
-      }
-    .product-card{
+    }
+
+    .product-card {
         width: 40vw;
         align-items: center;
     }
-    .img{
+
+    .img {
         max-height: 22vh;
         max-width: 35vw;
     }
 }
 
-@media(max-width:500px){
-    .product-card{
+@media (max-width: 500px) {
+    .product-card {
         width: 40vw;
     }
-    .notfound{
+
+    .notfound {
         height: 30vh;
-    }    
+    }
 }
 
-@media(max-width:400px){
+@media (max-width: 400px) {
     .content {
         justify-content: center;
         align-items: center;
         display: flex;
-        gap: 2rem 0rem; 
+        gap: 2rem 0rem;
         padding: 2rem;
-      }
-      .product-card{
+    }
+
+    .product-card {
         height: 45vh;
         width: 60vw;
         align-items: center;
     }
-    .img{
+
+    .img {
         max-height: 30vh;
         max-width: 50vw;
     }

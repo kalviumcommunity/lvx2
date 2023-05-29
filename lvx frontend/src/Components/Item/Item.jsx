@@ -4,17 +4,15 @@ import { useEffect, useState } from "react";
 import "./items.css";
 import ProductCard from "./ProductCard";
 import { useGlobalContext } from "../../context";
-import notFound from "../../Images/notfound.webp"
-import { useNavigate } from "react-router-dom";
+import notFound from "../../Images/notfound.webp";
+import loading from "../../Images/loading.svg";
+// import { useNavigate } from "react-router-dom";
 
 const Item = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [data, setData] = useState(null);
   const url = `${process.env.REACT_APP_API}/api/v1/items`
   const {searchData} = useGlobalContext()
-  const returnHome = () => {
-    navigate('/')
-  }
 
   useEffect(() => {
     const fetchDB = async () => {
@@ -30,7 +28,7 @@ const Item = () => {
   }, []);
   if(searchData===''){
     console.log(searchData)
-    return <div className="noresults"> <img src={notFound} onClick={returnHome} alt="notfound" className="notfound" /></div>
+    return <div className="noresults"> <img src={notFound} alt="notfound" className="notfound" /></div>
   }
   else if (searchData) {
     return (
@@ -68,7 +66,7 @@ const Item = () => {
         ))}
       </div>
     );
-  } else return <>loading</>;
+  } else return <div className="loading"><img src={loading} alt="loading" /></div>;
 };
 
 export default Item;
