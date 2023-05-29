@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-evenly;
     background-color: rgb(33, 32, 32);
-    box-shadow:  2px 3px 10px 1px rgba(0, 0, 0, 0.747);
+    box-shadow: 2px 3px 10px 1px rgba(0, 0, 0, 0.747);
     height: 12vh;
     flex-direction: row;
 }
@@ -15,10 +15,11 @@
 }
 
 @keyframes rotates {
-    from{
+    from {
         transform: translateX(-0.3rem);
     }
-    to{
+
+    to {
         transform: translateX(0.3rem);
     }
 }
@@ -55,19 +56,18 @@
     overflow: hidden;
 }
 
-.about{
+.about {
     text-decoration: underline white;
     width: 9vw;
     height: 6vh;
     font-size: x-large;
-    /* background-color: rgb(4, 163, 83); */
 }
 
-.about:hover{
-    background-color: rgba(1, 153, 82, 0.763);
+.about:hover {
+    background-color: #184d7e;
 }
 
-.abtus{
+.abtus {
     color: white;
     width: 9vw;
     height: 6vh;
@@ -90,11 +90,11 @@
     cursor: pointer;
 }
 
-.login:hover{
+.login:hover {
     background-color: #184d7e;
 }
 
-.log{
+.log {
     color: white;
     width: 10.5vh;
     height: 6vh;
@@ -116,11 +116,11 @@
     cursor: pointer;
 }
 
-.sell:hover{
+.sell:hover {
     background-color: #850101;
 }
 
-#sel{
+#sel {
     color: white;
     text-decoration: underline white;
     display: flex;
@@ -131,95 +131,113 @@
     cursor: pointer;
 }
 
-@media (max-width:750px){
-    .logo{
+@media (max-width: 750px) {
+    .logo {
         width: 10%;
     }
-    .abtus{
+
+    .abtus {
         font-size: large;
         display: flex;
     }
-    .login{
+
+    .login {
         font-size: large;
     }
-    .sell{
+
+    .sell {
         font-size: large;
         height: fit-content;
         width: fit-content;
         padding: 1%;
     }
-    #sel{
+
+    #sel {
         height: fit-content;
         width: fit-content;
     }
-    .input{
+
+    .input {
         font-size: medium;
     }
 }
 
-@media (max-width:550px){
-    .input{
+@media (max-width: 550px) {
+    .input {
         font-size: x-small;
         font-weight: 500;
         width: 20vw;
         height: 5vh;
         padding-left: 15px;
     }
-    .icon{
+
+    .icon {
         height: 5.4vh;
         width: 5vh;
     }
-    .logo{
+
+    .logo {
         width: 9%;
     }
-    .abtus{
+
+    .abtus {
         font-size: medium;
         display: flex;
     }
-    .login{
+
+    .login {
         font-size: medium;
     }
-    .sell{
+
+    .sell {
         font-size: medium;
         height: fit-content;
         width: fit-content;
         padding: 0.6%;
     }
-    #sel{
+
+    #sel {
         height: fit-content;
         width: fit-content;
     }
 }
 
-@media (max-width:420px){
+@media (max-width: 420px) {
+
     /* .navbar{
         flex-direction: column;
         height: 30vh;
     } */
-    .about:hover{
+    .about:hover {
         background-color: unset;
     }
-    .logo{
+
+    .logo {
         width: 9%;
     }
-    .abtus{
+
+    .abtus {
         font-size: small;
         display: flex;
     }
-    .login{
+
+    .login {
         font-size: small;
         height: fit-content;
         width: fit-content;
         padding: 1%;
     }
-    .log{
+
+    .log {
         height: fit-content;
         width: fit-content;
     }
-    .sell{
+
+    .sell {
         font-size: small;
     }
-    #sel{
+
+    #sel {
         height: fit-content;
         width: fit-content;
     }
