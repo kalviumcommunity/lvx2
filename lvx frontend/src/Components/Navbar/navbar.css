@@ -56,6 +56,10 @@
     overflow: hidden;
 }
 
+svg{
+    margin-right: 0.2vw;
+}
+
 .about {
     text-decoration: underline white;
     width: 9vw;
