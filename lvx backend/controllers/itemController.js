@@ -1,17 +1,17 @@
 const Item = require("./../models/itemModel");
+const APIFeatures = require("../utils/apiFeatures");
 
 exports.getAllItems = async (req, res) => {
   try {
-    // const search = req.query.search || "";
-    // const regex = new RegExp(search, "i");
-    // const items = await Item.find({ itemname: regex });
+    //EXECUTE QUERY
+    const features = new APIFeatures(Item.find(), req.query)
+      .filter()
+      .sort()
+      .search()
+      // .paginate();
+    const items = await features.query;
 
-    let query = Item.find().sort('-createdAt'); // sort by createdAt in descending order (latest first)
-    if (req.query.search) {
-      query = query.where('itemname').regex(new RegExp(req.query.search, 'i')); // search by itemname if search query parameter exists
-    }
-    const items = await query;
-
+    //SEND RESPONSE
     res.status(200).json({
       status: "success",
       results: items.length,
@@ -47,8 +47,6 @@ exports.getItem = async (req, res) => {
 
 exports.createItem = async (req, res) => {
   try {
-    // const newItem = new Item({});
-    // newItem.save();
     const newItem = await Item.create(req.body);
     res.status(201).json({
       status: "success",
